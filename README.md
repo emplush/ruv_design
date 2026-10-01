@@ -7,6 +7,7 @@ Quelle: [ruv-markenportal.de](https://www.ruv-markenportal.de) (Farben, Typograf
 | `tokens/tokens.json` | Einzige Wahrheit: Farben, Schriften, Radius, Raster |
 | `web/` | `tokens.css` (generiert), `base.css`, `index.html` (Demo) |
 | `web/icons.css`, `web/fonts/RuV-Icons-v3.*` | Iconfont v3 (219 Icons, Klassen `ruv-i-*`; TTF zur Desktop-Installation) |
+| `assets/logo/` | Logo 2025, RGB (SVG, PNG): ohne Claim, Claim links/rechts/zentriert, horizontal 1:1/1:2/1:3; je positiv/negativ/schwarz |
 | `assets/ki-label/` | KI-/AI-Label 2026, positiv/negativ: RGB (SVG, PNG), CMYK (PDF) |
 | `templates/ruv.pptx` | 16:9, Theme-Farben/-Schrift, 6 Layouts (Titel, Kapitel dunkel; Inhalt, 2 Inhalte, Nur Titel, Leer) |
 | `templates/ruv.docx` | A4, Formatvorlagen Titel/Überschriften/Liste/Zitat, Tabelle, Kopf-/Fußzeile |
@@ -20,6 +21,6 @@ Neu bauen: `python3 scripts/build_tokens.py && python3 scripts/build_pptx.py && 
 - Office: Arial als Ersatzschrift (Vorgabe Markenportal); Web: RuV Sans/Slab mit Arial/Georgia-Fallback.
 
 ## Offen
-- **RuV Sans** liegt in `web/fonts/` (Light, Regular, Bold, Black, jeweils mit Italic) und ist per `@font-face` eingebunden. **RuV Slab und Logo** fehlen noch; die Vorlagen enthalten ein Text-Logo „R+V" als Platzhalter.
+- **RuV Sans** liegt in `web/fonts/` (Light, Regular, Bold, Black, jeweils mit Italic) und ist per `@font-face` eingebunden. **RuV Slab** fehlt noch (Topline fällt auf Georgia zurück). Logo: PPTX nutzt das Logo ohne Claim als Eckenlogo (dunkel 4X unten links, hell 2.4X unten rechts), DOCX im Kopf, Web im Header.
 - Farben sind gegen `Farben.pdf` (Markenportal) abgeglichen, inkl. CMYK/Pantone. Funktionsfarben bestätigt: Rot 1 `FF4C4C` für helle, Rot 2 `FF8484` für dunkle Hintergründe; Grün `759A03` hell / `8EBC27` dunkel. Rot nur für Fehler in Formularen/Tabellen verwenden; `FF4C4C` als Text auf Weiß erreicht keinen WCAG-AA-Kontrast.
 - Adobe-Farbbibliotheken (`RuV_Farben_RGB_2025.ase`, `_CMYK_2025.ase`) liegen im Portal und fehlen im Repo.

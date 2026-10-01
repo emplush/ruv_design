@@ -48,7 +48,7 @@ b.append(bt); pPr.append(b)
 
 # Kopf- / Fusszeile
 hp = sec.header.paragraphs[0]
-r = hp.add_run("R+V  [Logo-Platzhalter]"); r.bold = True; r.font.size = Pt(12); r.font.color.rgb = rgb("primary")
+hp.add_run().add_picture(str(root / "assets/logo/ruv-logo_ohne-claim_positiv.png"), height=Cm(1.6))
 fp = sec.footer.paragraphs[0]; fp.alignment = WD_ALIGN_PARAGRAPH.RIGHT
 r = fp.add_run("Seite "); r.font.size = Pt(9); r.font.color.rgb = rgb("grey-5")
 def field(p, code):

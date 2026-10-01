@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Erzeugt templates/ruv.pptx (16:9) aus tokens/tokens.json. Schrift: Arial (Office-Fallback laut Markenportal)."""
+"""Erzeugt templates/ruv.pptx (16:9) aus tokens/tokens.json. Schrift: Arial (Office-Fallback laut Markenportal). Logo aus assets/logo."""
 import json, pathlib, re, copy
 from pptx import Presentation
 from pptx.util import Emu, Pt
@@ -79,9 +79,19 @@ def rect(layout, l, t, w, h, hexv):
     _sp(layout, "Akzent", l, t, w, h, fill=hexv)
 
 def logo_box(layout, dark):
-    """Logo-Platzhalter 4X breit, Ecke unten links (ohne Schutzzone)."""
-    _sp(layout, "Logo-Platzhalter", X, H - 1.5 * X, 4 * X, 0.8 * X, text="R+V",
-        color=C["white"] if dark else C["primary"])
+    """Logo ohne Claim als Eckenlogo (assets/logo). Dunkle Layouts: 4X unten links; helle: 2.4X unten rechts."""
+    kind = "negativ" if dark else "positiv"
+    _, rid = layout.part.get_or_add_image_part(str(root / f"assets/logo/ruv-logo_ohne-claim_{kind}.png"))
+    w = 4 * X if dark else 2.4 * X
+    h = w * 531 / 791
+    l = X if dark else W - X - w
+    t = H - X - h if dark else H - 0.6 * X - h
+    _id[0] += 1
+    xml = (f'<p:pic xmlns:p="{NS["p"]}" xmlns:a="{NS["a"]}" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">'
+           f'<p:nvPicPr><p:cNvPr id="{_id[0]}" name="Logo" descr="R+V"/><p:cNvPicPr><a:picLocks noChangeAspect="1"/></p:cNvPicPr><p:nvPr userDrawn="1"/></p:nvPicPr>'
+           f'<p:blipFill><a:blip r:embed="{rid}"/><a:stretch><a:fillRect/></a:stretch></p:blipFill>'
+           f'<p:spPr><a:xfrm><a:off x="{int(l)}" y="{int(t)}"/><a:ext cx="{int(w)}" cy="{int(h)}"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom></p:spPr></p:pic>')
+    layout._element.find("p:cSld/p:spTree", NS).append(etree.fromstring(xml))
 
 # ---- Master: Default-Template ist 4:3, Platzhalter auf 16:9 skalieren
 for sh in master.shapes:
