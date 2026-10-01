@@ -1,0 +1,37 @@
+@import url("tokens.css");
+/* Schriften RuV Sans/Slab sind proprietaer (Markenportal-Download) und nicht im Repo.
+   Lege sie unter web/fonts/ ab und entkommentiere: 
+@font-face{font-family:"RuV Sans";src:url("fonts/RuVSansVAR.woff2") format("woff2-variations");font-weight:100 900;font-display:swap}
+@font-face{font-family:"RuV Slab";src:url("fonts/RuVSlabVAR.woff2") format("woff2-variations");font-weight:100 900;font-display:swap}
+*/
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;font:400 1rem/1.5 var(--ruv-font-sans);color:var(--ruv-primary);background:var(--ruv-white)}
+h1,h2,h3{font-family:var(--ruv-font-sans);font-weight:700;line-height:1.15;margin:0 0 .5em;color:var(--ruv-primary)}
+h1{font-size:clamp(2rem,5vw,3.25rem)} h2{font-size:clamp(1.5rem,3vw,2.25rem)} h3{font-size:1.25rem}
+.topline{font-family:var(--ruv-font-slab);font-weight:700;color:var(--ruv-orange-dark);text-transform:none;margin:0 0 .5em}
+strong{font-weight:900}
+a{color:var(--ruv-mint-dark);text-decoration:underline}
+a:hover{color:var(--ruv-interactive-hover)}
+:focus-visible{outline:3px solid var(--ruv-orange-dark);outline-offset:2px}
+.container{max-width:1200px;margin:0 auto;padding:0 1rem}
+.section{padding:3rem 0}
+.section--dark{background:var(--ruv-primary);color:var(--ruv-white)}
+.section--dark h1,.section--dark h2,.section--dark h3{color:var(--ruv-white)}
+.section--dark .topline,.section--dark h1 em,.section--dark h2 em{color:var(--ruv-orange-light);font-style:normal}
+.section--dark a{color:var(--ruv-mint-light)}
+.section--sand{background:var(--ruv-sand)}
+.btn{display:inline-block;padding:.75rem 1.5rem;border-radius:var(--ruv-radius);font:700 1rem/1 var(--ruv-font-sans);text-decoration:none;border:2px solid transparent;cursor:pointer}
+.btn--primary{background:var(--ruv-mint-dark);color:var(--ruv-white)}
+.btn--primary:hover{background:var(--ruv-interactive-hover);color:var(--ruv-white)}
+.section--dark .btn--primary{background:var(--ruv-mint-light);color:var(--ruv-primary)}
+.section--dark .btn--primary:hover{background:var(--ruv-interactive-light-hover);color:var(--ruv-primary)}
+.btn--ghost{border-color:currentColor;background:transparent;color:inherit}
+.grid{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(16rem,1fr))}
+.card{background:var(--ruv-white);border:1px solid var(--ruv-grey-3);border-radius:var(--ruv-radius);padding:1.5rem}
+.card--sand{background:var(--ruv-sand);border-color:var(--ruv-brown-1)}
+label{font-weight:700;display:block;margin-bottom:.25rem}
+input,select,textarea{width:100%;padding:.7rem .8rem;font:inherit;color:var(--ruv-primary);border:1px solid var(--ruv-grey-5);border-radius:var(--ruv-radius)}
+.error{color:#b3261e}
+.header{background:var(--ruv-white);border-bottom:1px solid var(--ruv-grey-2)}
+.header .container{display:flex;align-items:center;justify-content:space-between;height:4rem}
+.footer{background:var(--ruv-primary);color:var(--ruv-white);padding:2rem 0;font-size:.875rem}
