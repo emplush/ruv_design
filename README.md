@@ -9,6 +9,7 @@ Quelle: [ruv-markenportal.de](https://www.ruv-markenportal.de) (Farben, Typograf
 | `web/icons.css`, `web/fonts/RuV-Icons-v3.*` | Iconfont v3 (219 Icons, Klassen `ruv-i-*`; TTF zur Desktop-Installation) |
 | `assets/logo/` | Logo 2025, RGB (SVG, PNG): ohne Claim, Claim links/rechts/zentriert, horizontal 1:1/1:2/1:3; je positiv/negativ/schwarz |
 | `assets/ki-label/` | KI-/AI-Label 2026, positiv/negativ: RGB (SVG, PNG), CMYK (PDF) |
+| `wording/README.md`, `scripts/check_wording.py`, `CLAUDE.md` | R+V Corporate Wording (Ton, Du/Sie, Schreibstil, 12 Sprachleitplanken, Gendern, Medien-Anwendung, Checkliste); Prüfskript; Pflichtregeln für alle Texte auf Basis des Designs |
 | `fonts/ttf/`, `docs/` | RuV Type TTF (Desktop), Specimen-PDF |
 | `templates/ruv.pptx` | 16:9, Theme-Farben/-Schrift, 6 Layouts (Titel, Kapitel dunkel; Inhalt, 2 Inhalte, Nur Titel, Leer) |
 | `templates/ruv.docx` | A4, Formatvorlagen Titel/Überschriften/Liste/Zitat, Tabelle, Kopf-/Fußzeile |
@@ -17,6 +18,7 @@ Quelle: [ruv-markenportal.de](https://www.ruv-markenportal.de) (Farben, Typograf
 Neu bauen: `python3 scripts/build_tokens.py && python3 scripts/build_pptx.py && python3 scripts/build_docx.py`
 
 ## Regeln, die umgesetzt sind
+- Texte: nach `wording/README.md` (Sie als Standard, herzlicher Ton, höchstens 20 Wörter pro Satz, kein „leider“, Gendern ohne Sonderzeichen). Vor jeder Abgabe `python3 scripts/check_wording.py <datei>`.
 - Headlines: Weiß + Orange Hell auf Dunkelblau, Dunkelblau + Orange Dunkel auf hellem Grund. Interaktiv: Mint Hell auf dunkel, Mint Dunkel auf hell.
 - Raster X = 1/14 der kürzeren Formatseite; Logo 4X (ohne) / 6X (mit Schutzzone) in der Ecke (PPTX-Layouts nutzen X).
 - Office: Arial als Ersatzschrift (Vorgabe Markenportal); Web: RuV Sans/Slab mit Arial/Georgia-Fallback.

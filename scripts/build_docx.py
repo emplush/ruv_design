@@ -63,14 +63,14 @@ field(fp, "PAGE")
 
 # Beispielinhalt
 d.add_paragraph("Dokumenttitel", style="Title")
-d.add_paragraph("Untertitel oder Topline", style="Subtitle")
-d.add_paragraph("Fließtext in Arial 11 pt, Dunkelblau. Hervorhebungen im Fließtext werden fett gesetzt.")
+d.add_paragraph("Topline oder Untertitel", style="Subtitle")
+d.add_paragraph("Vielen Dank für Ihre Nachricht. Wir kümmern uns persönlich darum und melden uns in den nächsten Tagen bei Ihnen. Hervorhebungen setzen wir fett.")
 d.add_heading("Überschrift 1", 1)
-d.add_paragraph("Beispieltext.")
+d.add_paragraph("Gerne beraten wir Sie auch telefonisch.")
 d.add_heading("Überschrift 2", 2)
-d.add_paragraph("Erster Punkt", style="List Bullet"); d.add_paragraph("Zweiter Punkt", style="List Bullet")
+d.add_paragraph("Schicken Sie uns bitte noch Ihre Unterlagen.", style="List Bullet"); d.add_paragraph("Wir prüfen sie sorgfältig und antworten Ihnen schnell.", style="List Bullet")
 d.add_heading("Überschrift 3", 3)
-d.add_paragraph("Zitat oder Hinweis", style="Quote")
+d.add_paragraph("Sie müssen nichts weiter tun. Wir melden uns bei Ihnen.", style="Quote")
 
 # Tabelle: Kopfzeile Dunkelblau, Zebra Sand
 t = d.add_table(rows=3, cols=3); t.autofit = True

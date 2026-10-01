@@ -112,10 +112,15 @@ w("README.md", """Du bist nicht allein. Das ist die Haltung hinter jedem R+V-Auf
 
 ## Content Fundamentals
 
-- Sprich Kundinnen und Kunden mit „Sie“ an („Darauf können Sie sich verlassen.“). Schreibe aktiv, kurz und konkret.
-- Buttons nennen die Handlung: „Jetzt berechnen“, „Jetzt informieren“. Kein Ausrufezeichen, kein Emoji.
+Alle Texte folgen dem R+V Corporate Wording (Abschnitt „Corporate Wording“). Das Wichtigste für jeden Text, der auf diesem Design entsteht:
+
+- **Ton:** herzlich, wie mit guten Bekannten: freundlich, aufmerksam, unterstützend, auf Augenhöhe. Warm statt kalt, nie amtlich.
+- **Ansprache:** Sie auf ruv.de, in Kundenbereichen, Anschreiben, Rechnungen und Verträgen; Du in Social Media, Karriere, bei bestimmten Kampagnen und intern. Anredepronomen immer großschreiben (Du, Dein, Sie, Ihnen).
+- **Stil:** persönlich mit „wir“ oder „ich“, aktiv, positiv, Verben statt Nomen, höchstens 20 Wörter pro Satz, kein Amtsdeutsch, kein „leider“, keine Fußnoten. Fehler offen zugeben, Ablehnungen begründen.
+- **Gendern:** direkt ansprechen, Doppelnennung („Kundinnen und Kunden“) oder Partizip („Mitarbeitende“). Nie Genderstern, Doppelpunkt, Unterstrich oder Schrägstrich. Menü und Überschrift pragmatisch („Privatkunden“).
+- **UI-Texte:** Buttons nennen die Handlung („Jetzt berechnen“, „Jetzt informieren“); Fehlermeldungen sagen, was passiert ist und wie es weitergeht. Keine Ausrufezeichen, keine Emojis.
 - Der Claim „Du bist nicht allein.“ gehört zum Logo und wird nie umformuliert, gesperrt oder in Versalien gesetzt.
-- Headlines sind knapp und plakativ („Große Headline, sehr plakativ“); die Topline darüber ordnet das Thema ein.
+- Headlines sind knapp und plakativ; die Topline darüber ordnet das Thema ein.
 
 ## Visual Foundations
 
@@ -156,6 +161,7 @@ w("README.md", """Du bist nicht allein. Das ist die Haltung hinter jedem R+V-Auf
 
 Binde die Bibliothek ein, indem du `tokens.css`, `bundle.css`, React 18 und `bundle.js` lädst; Komponenten liegen dann unter `window.RuV`.
 """)
+w("Corporate-Wording.md", (R/"wording/README.md").read_text(encoding="utf8"))
 w("Vorlagen.md", """# Vorlagen
 
 PowerPoint- und Word-Vorlagen liegen im Repository `emplush/ruv_design` unter `templates/` und werden aus den gleichen Tokens gebaut.
