@@ -35,7 +35,7 @@ a:hover{color:var(--ruv-interactive-hover)}
 .card--sand{background:var(--ruv-sand);border-color:var(--ruv-brown-1)}
 label{font-weight:700;display:block;margin-bottom:.25rem}
 input,select,textarea{width:100%;padding:.7rem .8rem;font:inherit;color:var(--ruv-primary);border:1px solid var(--ruv-grey-5);border-radius:var(--ruv-radius)}
-.error{color:#b3261e}
+.error{color:var(--ruv-error)}
 .header{background:var(--ruv-white);border-bottom:1px solid var(--ruv-grey-2)}
 .header .container{display:flex;align-items:center;justify-content:space-between;height:4rem}
 .footer{background:var(--ruv-primary);color:var(--ruv-white);padding:2rem 0;font-size:.875rem}
