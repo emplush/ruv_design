@@ -1,0 +1,83 @@
+{
+ "artifact": "https://claude.ai/artifact/46SH9r4rTB8rSRjfDpnJkN",
+ "Logos": {
+  "ruv-logo_claim-horizontal-1zu1_negativ.svg": [
+   "4efaf1809cd1e0b5c97e6bb55113b592",
+   9766
+  ],
+  "ruv-logo_claim-horizontal-1zu1_positiv.svg": [
+   "cb728b66c19d8a3a17b3eca3cffa00b6",
+   9766
+  ],
+  "ruv-logo_claim-horizontal-1zu2_negativ.svg": [
+   "365f4aad2a063e65c834c260c1df0c35",
+   9133
+  ],
+  "ruv-logo_claim-horizontal-1zu2_positiv.svg": [
+   "1c1f298cfd35baca880fbfa32691181b",
+   9133
+  ],
+  "ruv-logo_claim-horizontal-1zu3_negativ.svg": [
+   "c6f7d16aff7effabb36e1d643bca0740",
+   8672
+  ],
+  "ruv-logo_claim-horizontal-1zu3_positiv.svg": [
+   "07cae0ecc78a067feba0520022316618",
+   8672
+  ],
+  "ruv-logo_claim-links_negativ.svg": [
+   "303f3501546bd8d674552cecb58ad210",
+   8150
+  ],
+  "ruv-logo_claim-links_positiv.svg": [
+   "a47a1e619cb9429e01e3689e63694013",
+   8150
+  ],
+  "ruv-logo_claim-rechts_negativ.svg": [
+   "61196a6dc2e792fb7f67d95c6aa94070",
+   8149
+  ],
+  "ruv-logo_claim-rechts_positiv.svg": [
+   "5bfd676e910eda92efd66045249fff36",
+   8149
+  ],
+  "ruv-logo_claim-zentriert_negativ.svg": [
+   "723520d4301547a4d5034927e33c8737",
+   8150
+  ],
+  "ruv-logo_claim-zentriert_positiv.svg": [
+   "0f7aab999facc4a2459b803bb45c43bb",
+   8150
+  ],
+  "ruv-logo_ohne-claim_negativ.svg": [
+   "3496ba181cb15c987db9069eb3a9e3c9",
+   1008
+  ],
+  "ruv-logo_ohne-claim_positiv.svg": [
+   "3c7055648c26b93f395ef414dc928fb6",
+   1008
+  ],
+  "ruv-logo_ohne-claim_schwarz.svg": [
+   "4be9f4e3cee356f12b41107fb0bbe4fd",
+   1008
+  ]
+ },
+ "KI-Label": {
+  "AI_negativ.svg": [
+   "9ea4864da4e44325730cc0d7da8845bd",
+   2117
+  ],
+  "AI_positiv.svg": [
+   "2e9a2f8bc1bc186a245fbf9af6e7072f",
+   2073
+  ],
+  "KI_negativ.svg": [
+   "863703268a4facf6ee40f85a4206274c",
+   2193
+  ],
+  "KI_positiv.svg": [
+   "3330ed3b828772bb47ff7539965e44cb",
+   2154
+  ]
+ }
+}

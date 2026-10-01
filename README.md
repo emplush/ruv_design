@@ -25,3 +25,6 @@ Neu bauen: `python3 scripts/build_tokens.py && python3 scripts/build_pptx.py && 
 - **RuV Type v1.0** (Sans + Slab, je Light/Regular/Bold/Black mit Italic): WOFF2 in `web/fonts/`, TTF zur Desktop-Installation in `fonts/ttf/`, Specimen in `docs/`. Variable Fonts und die im Paket enthaltene `RuVSerif` (im Specimen nicht aufgeführt) sind bewusst nicht im Repo. Office-Vorlagen bleiben bei Arial (Vorgabe Markenportal).
 - Farben sind gegen `Farben.pdf` (Markenportal) abgeglichen, inkl. CMYK/Pantone. Funktionsfarben bestätigt: Rot 1 `FF4C4C` für helle, Rot 2 `FF8484` für dunkle Hintergründe; Grün `759A03` hell / `8EBC27` dunkel. Rot nur für Fehler in Formularen/Tabellen verwenden; `FF4C4C` als Text auf Weiß erreicht keinen WCAG-AA-Kontrast.
 - Adobe-Farbbibliotheken (`RuV_Farben_RGB_2025.ase`, `_CMYK_2025.ase`) liegen im Portal und fehlen im Repo.
+
+## Claude-Design-Artefakt
+Das Design System liegt als Artefakt unter https://claude.ai/artifact/46SH9r4rTB8rSRjfDpnJkN. Es wird aus diesem Repo erzeugt (`python3 scripts/build_design_system.py <ordner>`, Upload-IDs in `design-system/assets.json`). Änderungen an Tokens, Schriften, Logos oder Vorlagen werden im Repo und im Artefakt nachgezogen.
