@@ -1,6 +1,6 @@
 @import url("tokens.css");
 @import url("icons.css");
-/* RuV Sans (statisch, inkl. Italic). RuV Slab noch nicht im Repo. */
+/* RuV Sans und RuV Slab (RuV Type v1.0, statisch, inkl. Italic) */
 @font-face{font-family:"RuV Sans";src:url("fonts/RuVSans-Light.woff2") format("woff2");font-weight:300;font-style:normal;font-display:swap}
 @font-face{font-family:"RuV Sans";src:url("fonts/RuVSans-Regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
 @font-face{font-family:"RuV Sans";src:url("fonts/RuVSans-Bold.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
@@ -9,6 +9,14 @@
 @font-face{font-family:"RuV Sans";src:url("fonts/RuVSans-RegularItalic.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
 @font-face{font-family:"RuV Sans";src:url("fonts/RuVSans-BoldItalic.woff2") format("woff2");font-weight:700;font-style:italic;font-display:swap}
 @font-face{font-family:"RuV Sans";src:url("fonts/RuVSans-BlackItalic.woff2") format("woff2");font-weight:900;font-style:italic;font-display:swap}
+@font-face{font-family:"RuV Slab";src:url("fonts/RuVSlab-Light.woff2") format("woff2");font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:"RuV Slab";src:url("fonts/RuVSlab-LightItalic.woff2") format("woff2");font-weight:300;font-style:italic;font-display:swap}
+@font-face{font-family:"RuV Slab";src:url("fonts/RuVSlab-Regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"RuV Slab";src:url("fonts/RuVSlab-RegularItalic.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"RuV Slab";src:url("fonts/RuVSlab-Bold.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"RuV Slab";src:url("fonts/RuVSlab-BoldItalic.woff2") format("woff2");font-weight:700;font-style:italic;font-display:swap}
+@font-face{font-family:"RuV Slab";src:url("fonts/RuVSlab-Black.woff2") format("woff2");font-weight:900;font-style:normal;font-display:swap}
+@font-face{font-family:"RuV Slab";src:url("fonts/RuVSlab-BlackItalic.woff2") format("woff2");font-weight:900;font-style:italic;font-display:swap}
 *,*::before,*::after{box-sizing:border-box}
 body{margin:0;font:400 1rem/1.5 var(--ruv-font-sans);color:var(--ruv-primary);background:var(--ruv-white)}
 h1,h2,h3{font-family:var(--ruv-font-sans);font-weight:700;line-height:1.15;margin:0 0 .5em;color:var(--ruv-primary)}
