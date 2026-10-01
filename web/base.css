@@ -1,4 +1,5 @@
 @import url("tokens.css");
+@import url("icons.css");
 /* RuV Sans (statisch, inkl. Italic). RuV Slab noch nicht im Repo. */
 @font-face{font-family:"RuV Sans";src:url("fonts/RuVSans-Light.woff2") format("woff2");font-weight:300;font-style:normal;font-display:swap}
 @font-face{font-family:"RuV Sans";src:url("fonts/RuVSans-Regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
