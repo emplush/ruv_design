@@ -1,9 +1,9 @@
 @import url("tokens.css");
-/* Schriften RuV Sans/Slab sind proprietaer (Markenportal-Download) und nicht im Repo.
-   Lege sie unter web/fonts/ ab und entkommentiere: 
-@font-face{font-family:"RuV Sans";src:url("fonts/RuVSansVAR.woff2") format("woff2-variations");font-weight:100 900;font-display:swap}
-@font-face{font-family:"RuV Slab";src:url("fonts/RuVSlabVAR.woff2") format("woff2-variations");font-weight:100 900;font-display:swap}
-*/
+/* RuV Sans (statisch). Italic folgt; RuV Slab noch nicht im Repo. */
+@font-face{font-family:"RuV Sans";src:url("fonts/RuVSans-Light.woff2") format("woff2");font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:"RuV Sans";src:url("fonts/RuVSans-Regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"RuV Sans";src:url("fonts/RuVSans-Bold.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"RuV Sans";src:url("fonts/RuVSans-Black.woff2") format("woff2");font-weight:900;font-style:normal;font-display:swap}
 *,*::before,*::after{box-sizing:border-box}
 body{margin:0;font:400 1rem/1.5 var(--ruv-font-sans);color:var(--ruv-primary);background:var(--ruv-white)}
 h1,h2,h3{font-family:var(--ruv-font-sans);font-weight:700;line-height:1.15;margin:0 0 .5em;color:var(--ruv-primary)}
