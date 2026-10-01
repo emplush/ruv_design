@@ -18,6 +18,6 @@ Neu bauen: `python3 scripts/build_tokens.py && python3 scripts/build_pptx.py && 
 - Office: Arial als Ersatzschrift (Vorgabe Markenportal); Web: RuV Sans/Slab mit Arial/Georgia-Fallback.
 
 ## Offen
-- **RuV Sans** liegt in `web/fonts/` (Light, Regular, Bold, Black) und ist per `@font-face` eingebunden; Italic-Schnitte folgen. **RuV Slab, Iconfont und Logo** fehlen noch; die Vorlagen enthalten ein Text-Logo „R+V" als Platzhalter.
+- **RuV Sans** liegt in `web/fonts/` (Light, Regular, Bold, Black, jeweils mit Italic) und ist per `@font-face` eingebunden. **RuV Slab, Iconfont und Logo** fehlen noch; die Vorlagen enthalten ein Text-Logo „R+V" als Platzhalter.
 - Blau 2/3 und die Zwischenstufen der UI-Grautöne nennt das Portal nicht lesbar; `grey-4` stammt aus ruv.de.
 - Farbwerte stammen aus einer automatisch gelesenen Seitenfassung; vor Produktivnutzung gegen das Portal prüfen.
