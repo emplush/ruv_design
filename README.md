@@ -19,5 +19,5 @@ Neu bauen: `python3 scripts/build_tokens.py && python3 scripts/build_pptx.py && 
 
 ## Offen
 - **RuV Sans** liegt in `web/fonts/` (Light, Regular, Bold, Black, jeweils mit Italic) und ist per `@font-face` eingebunden. **RuV Slab, Iconfont und Logo** fehlen noch; die Vorlagen enthalten ein Text-Logo „R+V" als Platzhalter.
-- Farben sind gegen `Farben.pdf` (Markenportal) abgeglichen, inkl. CMYK/Pantone. Unsicher: Zuordnung Rot (`FF4C4C` hell / `FF8484` dunkel) – im PDF abgeschnitten. Rot nur für Fehler in Formularen/Tabellen verwenden; `FF4C4C` als Text auf Weiß erreicht keinen WCAG-AA-Kontrast.
+- Farben sind gegen `Farben.pdf` (Markenportal) abgeglichen, inkl. CMYK/Pantone. Funktionsfarben bestätigt: Rot 1 `FF4C4C` für helle, Rot 2 `FF8484` für dunkle Hintergründe; Grün `759A03` hell / `8EBC27` dunkel. Rot nur für Fehler in Formularen/Tabellen verwenden; `FF4C4C` als Text auf Weiß erreicht keinen WCAG-AA-Kontrast.
 - Adobe-Farbbibliotheken (`RuV_Farben_RGB_2025.ase`, `_CMYK_2025.ase`) liegen im Portal und fehlen im Repo.
