@@ -5,9 +5,9 @@ Dieses Repo ist das R+V-Design (Tokens, Web-Basis, PPTX-/DOCX-Vorlage, Design-Sy
 ## PowerPoint-Präsentationen: Startseite und Inhaltsseiten
 
 Vollständig: `docs/praesentationen.md`. Vorlage `templates/ruv.pptx`, neue Decks mit `scripts/new_deck.py`. Besonders auf die Startseite achten:
-- Logo mit Claim (weiß) oben links und „Die Versicherung in der“ mit Logo der Genossenschaftlichen Finanzgruppe unten links, an der Vorlage-Stelle und in Vorlage-Größe.
+- Logo mit Claim (weiß) oben links und das GFG-Logo mit Deskriptor „Die Versicherung in der“ (weiß) unten links, an der Vorlage-Stelle und in Vorlage-Größe.
 - Links auf Dunkelblau: Zeile in **Weiß** mit Ort, Datum und Referentin oder Referent; **Haupttitel in Orange**; **Untertitel in Weiß**.
-- Rechts ein Bild, das **immer zum Thema** der Präsentation passt: geliefertes Bild verwenden, sonst ein passendes Bild erstellen. Nie leer lassen.
+- Rechts ein Bild, das **immer zum Thema** der Präsentation passt: geliefertes Bild verwenden. Ohne geliefertes Bild vorerst **kein Bild erstellen**, Platzhalter leer lassen und darauf hinweisen.
 - Inhaltsseiten: Hauptheadline **blau**, Unterheadline **orange**, unten links Foliennummer, Titel der Präsentation und Datum, unten rechts das R+V-Logo.
 
 ## Texte immer nach dem R+V Corporate Wording

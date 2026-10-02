@@ -8,7 +8,7 @@ D = pathlib.Path(sys.argv[1] if len(sys.argv) > 1 else "/tmp/ruv_ds") / "project
 shutil.rmtree(D.parent, ignore_errors=True); D.mkdir(parents=True)
 (D/"fonts").mkdir(); (D/"components"/"Cover").mkdir(parents=True)
 for c in ("Button","Card","TextField"): (D/"components"/c).mkdir()
-(D/"assets"/"Logos").mkdir(parents=True); (D/"assets"/"KI-Label").mkdir()
+(D/"assets"/"Logos").mkdir(parents=True); (D/"assets"/"KI-Label").mkdir(); (D/"assets"/"GFG-Logo").mkdir()
 w = lambda p, s: (D/p).write_text(s, encoding="utf8")
 
 # ---------- fonts
@@ -145,6 +145,7 @@ Alle Texte folgen dem R+V Corporate Wording (Abschnitt „Corporate Wording“).
 
 - Schutzzone 1X rundum. Varianten: ohne Claim (Eckenlogo in Präsentationen, bei wenig Platz), Claim links, rechts oder zentriert (zentriert für Social Media und Motion), horizontal 1:1, 1:2, 1:3 (Video-Abbinder, Messe).
 - Farben: Blau auf hellem Grund (`positiv`), Weiß auf dunklem Grund (`negativ`), Schwarz nur bei technischer Einschränkung wie Schwarzweißdruck.
+- Das Logo der Genossenschaftlichen Finanzgruppe (`assets/GFG-Logo`) steht als Partnerzeichen unten links auf der Startseite von Präsentationen, als Deskriptor-Variante in Weiß auf Dunkelblau.
 - Logo und Claim nie trennen und weder Abstand, Farbe noch Schreibweise ändern. Das Logo nie neu zeichnen, immer die Dateien aus `assets/Logos` einsetzen.
 
 ## Iconography
@@ -183,6 +184,13 @@ w("assets/Logos/README.md", logo_readme)
 w("assets/KI-Label/README.md", """KI- und AI-Label 2026, Quadrat mit Funkelsymbol, zur Kennzeichnung KI-generierter Inhalte. `KI_*` für deutsche, `AI_*` für englische Inhalte.
 
 - Tinte: `positiv` Dunkelblau mit weißem Schriftzug auf hellem Grund; `negativ` auf dunklem Grund. Das Label nie umfärben oder neu zeichnen.
+""")
+
+w("assets/GFG-Logo/README.md", """Logo der Genossenschaftlichen Finanzgruppe Volksbanken Raiffeisenbanken, 2025, als SVG. Das Logo steht als Partnerzeichen der R+V; nicht neu zeichnen, nicht umfärben.
+
+- `deskriptor`: mit der Zeile „Die Versicherung in der“ darüber. Diese Variante steht auf der Startseite von Präsentationen unten links (negativ, weiß, auf Dunkelblau).
+- `ohne-deskriptor`: nur das Logo mit „Genossenschaftliche FinanzGruppe Volksbanken Raiffeisenbanken“.
+- `links` und `rechts` geben die Ausrichtung des Zeichens an; `positiv` gehört auf hellen Grund, `negativ` auf Dunkelblau.
 """)
 
 # ---------- components
@@ -306,13 +314,15 @@ def rec(name, blob, size): return {"name": name, "blob": blob, "size": size, "ty
 AS = json.loads((R/"design-system/assets.json").read_text())
 L = {k: tuple(v) for k, v in AS["Logos"].items()}
 K = {k: tuple(v) for k, v in AS["KI-Label"].items()}
+G = {k: tuple(v) for k, v in AS["GFG-Logo"].items()}
 order_logo = ["ruv-logo_ohne-claim_positiv.svg","ruv-logo_ohne-claim_negativ.svg","ruv-logo_ohne-claim_schwarz.svg"] + [k for k in L if "ohne-claim" not in k]
 idx = {"v": 3, "layout": "files", "createdOnFiles": {"v": 1, "at": datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ")},
  "title": "R+V Design", "namespace": "RuV", "libraries": [{"name": "react", "version": "18"}, {"name": "react-dom", "version": "18"}],
- "sections": {}, "groups": ["Logos", "KI-Label"],
+ "sections": {}, "groups": ["Logos", "KI-Label", "GFG-Logo"],
  "assetGroups": {
   "Logos": {"name": "Logos", "tile": "l", "order": order_logo, "files": {k: rec(k, *L[k]) for k in order_logo}},
-  "KI-Label": {"name": "KI-Label", "tile": "m", "order": list(K), "files": {k: rec(k, *v) for k, v in K.items()}}},
+  "KI-Label": {"name": "KI-Label", "tile": "m", "order": list(K), "files": {k: rec(k, *v) for k, v in K.items()}},
+  "GFG-Logo": {"name": "GFG-Logo", "tile": "l", "order": list(G), "files": {k: rec(k, *v) for k, v in G.items()}}},
  "blobs": {}, "docs": {"readme": "project/README.md", "sections": []},
  "lastChange": {"by": "Claude", "at": datetime.datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"), "via": "Claude Code", "note": "Erstanlage aus Markenportal-Quellen"}}
 w("design-system.json", json.dumps(idx, indent=1, ensure_ascii=False))

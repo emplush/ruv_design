@@ -112,12 +112,13 @@ def textbox(tree, name, x, y, w, h, runs, anchor="t"):
               f'<p:txBody><a:bodyPr wrap="square" lIns="0" tIns="0" rIns="0" bIns="0" anchor="{anchor}"/><a:lstStyle/>{paras}</p:txBody></p:sp>')
 
 # Logo-Dateien enthalten die Schutzzone. Sichtbarer Anteil (aus dem PNG gemessen):
-LOGO = {"ohne": dict(fw=791, fh=531, bb=(177, 176, 614, 355)), "claim": dict(fw=1062, fh=720, bb=(176, 177, 886, 544))}
+LOGO = {"ohne": dict(fw=791, fh=531, bb=(177, 176, 614, 355), f="assets/logo/ruv-logo_ohne-claim_{t}.png"),
+        "claim": dict(fw=1062, fh=720, bb=(176, 177, 886, 544), f="assets/logo/ruv-logo_claim-links_{t}.png"),
+        "gfg": dict(fw=1062, fh=554, bb=(190, 189, 869, 364), f="assets/logo-gfg/gfg-logo_deskriptor_links_{t}.png")}
 def logo(layout, tree, kind, tone, vis_left, vis_top, vis_w):
     """Setzt das Logo so, dass der SICHTBARE Teil bei (vis_left, vis_top) mit Breite vis_w sitzt."""
-    f = "ohne-claim" if kind == "ohne" else "claim-links"
     g = LOGO[kind]
-    _, rid = layout.part.get_or_add_image_part(str(root / f"assets/logo/ruv-logo_{f}_{tone}.png"))
+    _, rid = layout.part.get_or_add_image_part(str(root / g["f"].format(t=tone)))
     bw = g["bb"][2] - g["bb"][0]
     s = vis_w / bw                      # EMU je Bildpixel
     w, h = g["fw"] * s, g["fh"] * s
@@ -156,9 +157,8 @@ for l in prs.slide_layouts:
         ph(tree, "Ort, Datum, Referentin oder Referent", "body", 13, 59 * PX, 0.365 * H, 578 * PX, 0.04 * H, 20, False, C["white"], "Ort, Datum, Referentin oder Referent", "ctr")
         ph(tree, "Haupttitel", "ctrTitle", 0, 59 * PX, 0.4105 * H, 578 * PX, 0.136 * H, 36, True, C["orange-light"], "Haupttitel", "t", 95000)
         ph(tree, "Untertitel", "subTitle", 1, 59 * PX, 0.557 * H, 578 * PX, 0.134 * H, 32, True, C["white"], "Untertitel", "t", 95000)
-        textbox(tree, "Die Versicherung in der", 60 * PX, 0.8605 * H, 300 * PX, 0.03 * H, [[("Die Versicherung in der", 11, True, C["white"])]])
-        textbox(tree, "Logo Genossenschaftliche Finanzgruppe (Platzhalter)", 60 * PX, 0.895 * H, 300 * PX, 0.04 * H,
-                [[("Genossenschaftliche Finanzgruppe", 8, False, C["white"])], [("Volksbanken Raiffeisenbanken", 8, False, C["white"])]])
+        # "Die Versicherung in der" + Logo der Genossenschaftlichen Finanzgruppe (Deskriptor-Logo, weiß), unten links
+        logo(l, tree, "gfg", "negativ", 60 * PX, 668 / 775 * H, 188 * PX)
     elif orig == "Section Header":
         set_bg(l, C["primary"])
         logo(l, tree, "claim", "negativ", 60 * PX, 62 / 775 * H, 215 * PX)

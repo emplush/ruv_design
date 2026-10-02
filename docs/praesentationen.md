@@ -8,7 +8,7 @@ Die Startseite ist geteilt: links eine dunkelblaue Fläche (`primary`, etwa die 
 
 **Logos**
 - Oben links in Weiß das R+V-Logo mit Claim „Du bist nicht allein.“ (`ruv-logo_claim-links_negativ`). Sichtbare Breite etwa 16 % der Folienbreite, linke Kante etwa 4,4 % der Folienbreite, Oberkante etwa 8 % der Folienhöhe. Logo nie verzerren, umfärben, beschneiden oder neu zeichnen; die Schutzzone bleibt frei.
-- Unten links in Weiß, fett: „Die Versicherung in der“, darunter das Logo „Genossenschaftliche Finanzgruppe Volksbanken Raiffeisenbanken“. Beide Elemente sitzen an der Vorlage-Position und in Vorlage-Größe, linksbündig mit dem Logo oben.
+- Unten links das GFG-Logo mit Deskriptor (`gfg-logo_deskriptor_links_negativ`): „Die Versicherung in der“ mit dem Logo der Genossenschaftlichen Finanzgruppe Volksbanken Raiffeisenbanken, in Weiß. Es sitzt an der Vorlage-Position (linksbündig mit dem R+V-Logo oben) und in Vorlage-Größe. Nie als Text nachbauen.
 
 **Textfolge links, von oben nach unten**
 1. Eine Zeile in **weißer** Schrift mit Ort, Datum und Referentin oder Referent („Wiesbaden, 02.10.2026, Anna Beispiel“). Nicht „Referent/-in“: der Gendern-Leitfaden verbietet Sparschreibungen.
@@ -18,7 +18,7 @@ Die Startseite ist geteilt: links eine dunkelblaue Fläche (`primary`, etwa die 
 **Bild rechts**
 - Das Bild passt immer zum Thema der Präsentation.
 - Wird ein Bild geliefert, wird genau dieses Bild verwendet.
-- Wird kein Bild geliefert, wird ein passendes Bild erstellt. Der Bildplatz bleibt nie leer und wird nicht mit einem beliebigen Fremdbild aus dem Netz gefüllt.
+- Wird kein Bild geliefert, wird vorerst **kein Bild erstellt** und auch kein beliebiges Fremdbild eingesetzt. Der Bildplatzhalter der Startseite bleibt leer, und es wird darauf hingewiesen, dass das Bild fehlt.
 - Das Bild füllt die rechte Fläche randlos, wird zugeschnitten statt verzerrt und liegt vollständig im Folienrand.
 
 ## Inhaltsseiten
@@ -36,7 +36,7 @@ Dunkelblau, Logo mit Claim oben links, Kapitelüberschrift in Orange, Untertitel
 
 ## Vor der Abgabe prüfen
 
-- Logos oben links und unten rechts vorhanden, an der richtigen Stelle, in der richtigen Größe, unverzerrt.
-- Startseite: Zeile Ort/Datum weiß, Haupttitel orange, Untertitel weiß, Bild passt zum Thema und füllt die rechte Fläche.
+- Logos vorhanden (R+V mit Claim und GFG-Logo auf der Startseite, R+V unten rechts auf Inhaltsseiten), an der richtigen Stelle, in der richtigen Größe, unverzerrt.
+- Startseite: Zeile Ort/Datum weiß, Haupttitel orange, Untertitel weiß, Bild (sofern geliefert) passt zum Thema und füllt die rechte Fläche; fehlt es, ist das benannt.
 - Inhaltsseiten: Hauptheadline blau, Unterheadline orange, unten links Foliennummer, Titel der Präsentation und Datum, unten rechts Logo.
 - Texte mit `python3 scripts/check_wording.py` und der Checkliste im Corporate Wording geprüft.

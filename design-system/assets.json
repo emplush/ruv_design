@@ -79,5 +79,39 @@
    "3330ed3b828772bb47ff7539965e44cb",
    2154
   ]
+ },
+ "GFG-Logo": {
+  "gfg-logo_deskriptor_links_negativ.svg": [
+   "1bf62daaf705a7939d32380445fcbd0e",
+   20886
+  ],
+  "gfg-logo_deskriptor_links_positiv.svg": [
+   "3d56807294b43b8435f813cc724df9d8",
+   20778
+  ],
+  "gfg-logo_deskriptor_rechts_negativ.svg": [
+   "4cf38d6525cbc34d752a50b802e8c3df",
+   20887
+  ],
+  "gfg-logo_deskriptor_rechts_positiv.svg": [
+   "2d1d2a9df21a2ba73d04a1c3e130e75d",
+   20779
+  ],
+  "gfg-logo_ohne-deskriptor_links_negativ.svg": [
+   "db42a0e7fa9de69ec23f6bb4c7012ed8",
+   30190
+  ],
+  "gfg-logo_ohne-deskriptor_links_positiv.svg": [
+   "908cb2997452efa86a40fb45514d0449",
+   30070
+  ],
+  "gfg-logo_ohne-deskriptor_rechts_negativ.svg": [
+   "473aefb4a3ecb88b52127a69f1423328",
+   30131
+  ],
+  "gfg-logo_ohne-deskriptor_rechts_positiv.svg": [
+   "fa0e1369c6f0ae64aa750c1c0376dbec",
+   29983
+  ]
  }
 }
