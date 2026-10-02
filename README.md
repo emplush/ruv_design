@@ -11,7 +11,7 @@ Quelle: [ruv-markenportal.de](https://www.ruv-markenportal.de) (Farben, Typograf
 | `assets/ki-label/` | KI-/AI-Label 2026, positiv/negativ: RGB (SVG, PNG), CMYK (PDF) |
 | `wording/README.md`, `scripts/check_wording.py`, `CLAUDE.md` | R+V Corporate Wording (Ton, Du/Sie, Schreibstil, 12 Sprachleitplanken, Gendern, Medien-Anwendung, Checkliste); Prüfskript; Pflichtregeln für alle Texte auf Basis des Designs |
 | `fonts/ttf/`, `docs/` | RuV Type TTF (Desktop), Specimen-PDF |
-| `templates/ruv.pptx` | 16:9, Theme-Farben/-Schrift, 6 Layouts (Titel, Kapitel dunkel; Inhalt, 2 Inhalte, Nur Titel, Leer) |
+| `templates/ruv.pptx`, `scripts/new_deck.py`, `docs/praesentationen.md` | 16:9, Theme-Farben/-Schrift, 6 Layouts: Startseite (links dunkelblau mit Logo, Claim und Texten, rechts Bild), Kapitel, Titel und Inhalt, Zwei Inhalte, Nur Titel, Leer. Inhaltsseiten mit Hauptheadline blau, Unterheadline orange, Fußzeile links, Logo rechts. Regeln: `docs/praesentationen.md` |
 | `templates/ruv.docx` | A4, Formatvorlagen Titel/Überschriften/Liste/Zitat, Tabelle, Kopf-/Fußzeile |
 | `scripts/` | `build_tokens.py`, `build_pptx.py`, `build_docx.py` (Abhängigkeiten: `python-pptx`, `python-docx`) |
 

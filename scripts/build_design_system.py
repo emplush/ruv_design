@@ -162,11 +162,12 @@ Alle Texte folgen dem R+V Corporate Wording (Abschnitt „Corporate Wording“).
 Binde die Bibliothek ein, indem du `tokens.css`, `bundle.css`, React 18 und `bundle.js` lädst; Komponenten liegen dann unter `window.RuV`.
 """)
 w("Corporate-Wording.md", (R/"wording/README.md").read_text(encoding="utf8"))
+w("Praesentationen.md", (R/"docs/praesentationen.md").read_text(encoding="utf8"))
 w("Vorlagen.md", """# Vorlagen
 
 PowerPoint- und Word-Vorlagen liegen im Repository `emplush/ruv_design` unter `templates/` und werden aus den gleichen Tokens gebaut.
 
-- `ruv.pptx`: 16:9, Themefarben und -schrift (Arial), sechs Layouts: Titelfolie und Kapitel auf Dunkelblau, Titel und Inhalt, Zwei Inhalte, Nur Titel, Leer. Logo ohne Claim als Eckenlogo (dunkel 4X unten links, hell 2,4X unten rechts), oranger Akzentstreifen auf hellen Folien.
+- `ruv.pptx`: 16:9, Themefarben und -schrift (Arial), sechs Layouts: Startseite, Kapitel, Titel und Inhalt, Zwei Inhalte, Nur Titel, Leer. Details und Regeln im Abschnitt „Präsentationen“.
 - `ruv.docx`: A4, Arial 11 pt in Dunkelblau, Formatvorlagen Titel (orange Linie), Überschrift 1 bis 3, Liste, Zitat; Tabelle mit dunkelblauer Kopfzeile und Sand-Zebra; Logo im Kopf, Seitenzahl in der Fußzeile.
 - Neu bauen: `python3 scripts/build_tokens.py && python3 scripts/build_pptx.py && python3 scripts/build_docx.py`.
 """)

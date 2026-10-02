@@ -123,7 +123,7 @@ Diese Regeln leiten sich aus Leitplanke 11 und den Abschnitten oben ab.
 - Keine Fachbegriffe ohne Erklärung. Englische Begriffe nur, wenn sie fester Bestandteil des Deutschen sind.
 - Datum und Beträge exakt und aktuell: „15.12.2026“, „800,00 EUR“.
 
-**Präsentationen**
+**Präsentationen** (Aufbau von Start- und Inhaltsseiten: `docs/praesentationen.md`)
 - Kunden- und Partnerpräsentationen in Sie, interne in Du („Liebe Kolleginnen und Kollegen“).
 - Folientitel plakativ und aktiv, ein Gedanke pro Folie, kurze Sätze (höchstens 20 Wörter), Verben statt Nomen. Topline ordnet das Thema ein.
 - Keine Fußnoten und kein Kleingedrucktes auf Folien; Aussagen direkt in den Text.
