@@ -28,6 +28,7 @@ DECL = f'xmlns:p="{NS["p"]}" xmlns:a="{NS["a"]}" xmlns:r="{NS["r"]}"'
 prs = Presentation()
 prs.slide_width, prs.slide_height = Emu(12192000), Emu(6858000)
 W, H = prs.slide_width, prs.slide_height
+prs.part._element.find(f'{{{NS["p"]}}}sldSz').attrib.pop("type", None)   # Standardvorlage meldet sonst 4:3
 master = prs.slide_master
 
 # ---- Theme: Farben + Schriften
