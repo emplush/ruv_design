@@ -5,7 +5,7 @@ Schrift: Arial (Office-Fallback laut Markenportal). Maße nach der R+V-Vorlage:
  Startseite: links Dunkelblau mit Logo + Claim, Zeile Ort/Datum (weiß), Haupttitel (orange), Untertitel (weiß);
              rechts Bild (Platzhalter). Inhaltsseiten: Hauptheadline blau, Unterheadline orange,
              unten links Foliennummer + Titel der Präsentation + Datum, unten rechts Logo."""
-import argparse, json, pathlib, re
+import argparse, json, pathlib, re, uuid
 from pptx import Presentation
 from pptx.util import Emu
 from pptx.opc.constants import RELATIONSHIP_TYPE as RT
@@ -28,6 +28,7 @@ DECL = f'xmlns:p="{NS["p"]}" xmlns:a="{NS["a"]}" xmlns:r="{NS["r"]}"'
 prs = Presentation()
 prs.slide_width, prs.slide_height = Emu(12192000), Emu(6858000)
 W, H = prs.slide_width, prs.slide_height
+prs.part._element.find(f'{{{NS["p"]}}}sldSz').attrib.pop("type", None)   # Standardvorlage meldet sonst 4:3
 master = prs.slide_master
 
 # ---- Theme: Farben + Schriften
@@ -103,7 +104,7 @@ def textbox(tree, name, x, y, w, h, runs, anchor="t"):
         for item, size, bold, color in para:
             rpr = f'<a:rPr lang="de-DE" sz="{int(size*100)}" b="{int(bold)}"><a:solidFill><a:srgbClr val="{color}"/></a:solidFill></a:rPr>'
             if isinstance(item, tuple):
-                inner += f'<a:fld id="{{B6F15528-21DE-4FAA-801E-634DDDAF4B{nid():02d}}}" type="{item[1]}">{rpr}<a:t>{item[2]}</a:t></a:fld>'
+                inner += f'<a:fld id="{{{str(uuid.uuid4()).upper()}}}" type="{item[1]}">{rpr}<a:t>{item[2]}</a:t></a:fld>'
             else:
                 inner += f'<a:r>{rpr}<a:t>{item}</a:t></a:r>'
         paras += f'<a:p>{inner}</a:p>'
